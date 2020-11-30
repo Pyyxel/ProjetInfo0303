@@ -9,4 +9,8 @@ class Cours extends Model
 {
     use HasFactory;
     protected $table="cours";
+
+    public function groupe(){
+        return $this->belongsToMany(Groupe::class,'coursgroupe');
+    }
 }

@@ -17,7 +17,7 @@ class CreateCoursTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('cours');
-            $table->date('date_cours');
+            $table->dateTime('date_cours');
 
         });
     }

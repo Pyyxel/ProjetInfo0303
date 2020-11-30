@@ -9,4 +9,8 @@ class Eleve extends Model
 {
     use HasFactory;
     protected $table="eleves";
+
+    public function groupe(){
+        return $this->belongsToMany(Groupe::class,'groupeeleve');
+    }
 }

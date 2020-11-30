@@ -10,7 +10,12 @@ class Matiere extends Model
     use HasFactory;
 
     protected $table ="Matiere";
+    
     public function formation(){
         return $this->belongsToMany(Formation::class,'FormationMatiere');
+    }
+
+    public function groupes(){
+        return $this->belongsToMany(Groupe::class,'matieregroupe');
     }
 }
