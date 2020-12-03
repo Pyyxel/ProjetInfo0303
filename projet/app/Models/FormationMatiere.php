@@ -9,5 +9,5 @@ class FormationMatiere extends Model
 {
     use HasFactory;
 
-    protected $table="FormationMatiere";
+    protected $table="formation_matiere";
 }

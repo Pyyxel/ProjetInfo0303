@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AcceuilController;
+use App\Http\Controllers\LogOutController;
+use App\Http\Controllers\CoursController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +19,13 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/acceuil', function () {
-    return view('acceuil');
-});
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/acceuil', [Acceuil::class, acceuilProf()])->name('acceuil');
+
+
+Route::get('/acceuil', [AcceuilController::class, 'acceuilProf']);
+Route::get('/cours/{idGroupe}', [CoursController::class, 'coursListe']);
+
+
+
+Route::get('/logout', [LogOutController::class,'logout']);

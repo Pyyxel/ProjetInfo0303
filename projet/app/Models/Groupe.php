@@ -14,7 +14,7 @@ class Groupe extends Model
         return $this->belongsToMany(Matiere::class,'matieregroupe');
     }
     public function cours(){
-        return $this->belongsToMany(Cours::class,'coursgroupe');
+        return $this->belongsToMany(Cours::class,'cours_groupes');
     }
 
     public function eleve(){

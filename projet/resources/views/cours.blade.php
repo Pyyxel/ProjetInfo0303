@@ -44,15 +44,18 @@
 <table id="table_id" class="display">
     <thead>
         <tr>
-            <th>Groupe</th>
-            <th>option</th>
+            <th>Cours</th>
+            <th>Date</th>
+            <th>heure</th>
         </tr>
     </thead>
     <tbody>
-    @foreach ($groupes as $groupe)
+    @foreach ($cours as $courss)
         <tr>
-            <td>{{ $groupe->groupe }}</td>
-            <td><a href="/cours/{{ $groupe->id }}">cours </a>/ eleves</td>
+            <td>{{ $courss->cours }}</td>
+            <td>{{ $courss->date_cours->format('m-d-Y') }}</td>
+            <td>{{ $courss->date_cours->format('h:m') }}</td>
+            <td><a href="/cours">eleves</td>
         </tr>
     @endforeach
     </tbody>

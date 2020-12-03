@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class GroupeUser extends Model
 {
     use HasFactory;
-    protected $table="goupeuser";
+    protected $table="goupe_users";
 }
