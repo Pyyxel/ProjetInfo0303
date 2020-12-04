@@ -25,6 +25,10 @@ Route::get('/', function () {
 
 Route::get('/acceuil', [AcceuilController::class, 'acceuilProf']);
 Route::get('/cours/{idGroupe}', [CoursController::class, 'coursListe']);
+Route::get('/cours/eleve/{idGroupe}', [CoursController::class, 'eleveListe']);
+Route::get('/cours/absence/{idEleve}/{idGroupe}', [CoursController::class, 'eleveAbsent']);
+Route::get('/cours/AJ/{idEleve}/{idGroupe}', [CoursController::class, 'eleveAJ']);
+Route::get('/cours/present/{idEleve}/{idGroupe}', [CoursController::class, 'elevePresent']);
 
 
 

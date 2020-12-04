@@ -55,7 +55,7 @@
             <td>{{ $courss->cours }}</td>
             <td>{{ $courss->date_cours->format('m-d-Y') }}</td>
             <td>{{ $courss->date_cours->format('h:m') }}</td>
-            <td><a href="/cours">eleves</td>
+            <td><a href="/cours/eleve/{{ $courss->id }}">absences</td>
         </tr>
     @endforeach
     </tbody>

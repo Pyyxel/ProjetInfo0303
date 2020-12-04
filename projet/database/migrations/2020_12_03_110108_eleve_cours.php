@@ -18,6 +18,7 @@ class Elevecours extends Migration
             $table->bigInteger('eleve_id')->unsigned();
             $table->bigInteger('cours_id')->unsigned();
             $table->timestamps();
+            $table->string('presence')->nullable();
             $table->foreign('eleve_id')
             ->references('id')->on('eleves')
             ;

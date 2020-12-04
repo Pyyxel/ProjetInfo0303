@@ -10,4 +10,6 @@ class EleveCours extends Model
     use HasFactory;
     protected $table="eleve_cours";
 
+
+
 }

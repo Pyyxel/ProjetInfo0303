@@ -18,7 +18,7 @@ class CreateElevesTable extends Migration
             $table->timestamps();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('numero etudiant');
+            $table->string('numero_etudiant');
         });
     }
 
