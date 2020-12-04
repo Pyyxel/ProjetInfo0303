@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href={{ url('css/style.css') }} rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
-
 </head>
-
-
-
-
-
-
-
 <body>
 <div class="topnav" id="myTopnav">
     <div class="nav-bar">
@@ -37,38 +29,29 @@
     </div>
     </center> 
 </div>
-
-
 <a href="{{ url('/logout') }}"> logout </a>
-
 <table id="table_id" class="display">
-    <thead> 
+    <thead>
         <tr>
-            <th>Groupe</th>
-            <th>option</th>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Numero etudiant</th>
         </tr>
     </thead>
     <tbody>
-    @foreach ($groupes as $groupe)
+        @foreach($eleves as $elevess)
         <tr>
-            <td>{{ $groupe->groupe }}</td>
-            <td><a href="/cours/{{ $groupe->id }}">cours </a>/ 
-            <a href="groupe/eleves/{{ $groupe->id }}">eleves</a></td>
+            <th>{{ $elevess->id }}</th>
+            <th>{{ $elevess->nom }}</th>
+            <th>{{ $elevess->prenom }}</th>
+            <th>{{ $elevess->numero_etudiant }}</th>
         </tr>
-    @endforeach
+        
+        @endforeach
     </tbody>
-</table>
 
 
-
-
-
-
-<script>
-    $(document).ready( function () {
-        $('#myTable').DataTable();
-    } );
-</script>
 
 <script>
     function myFunction() {
@@ -80,8 +63,6 @@
   }
 }
 </script>
-
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
-
+    
 </body>
 </html>

@@ -18,10 +18,10 @@ class Groupe extends Model
     }
 
     public function eleve(){
-        return $this->belongsToMany(Eleve::class,'groupeeleve');
+        return $this->belongsToMany(Eleve::class,'groupe_eleves');
     }
 
     public function user(){
-        return $this->belongsToMany(User::class,'groupeuser');
+        return $this->belongsToMany(User::class,'groupe_users');
     }
 }

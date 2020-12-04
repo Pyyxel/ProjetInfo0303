@@ -19,4 +19,6 @@ class Cours extends Model
     public function eleve(){
         return $this->belongsToMany(Eleve::class, 'eleve_cours');
     }
+
+    
 }

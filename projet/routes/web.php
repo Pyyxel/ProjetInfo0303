@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AcceuilController;
 use App\Http\Controllers\LogOutController;
 use App\Http\Controllers\CoursController;
+use App\Http\Controllers\GroupeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +31,7 @@ Route::get('/cours/eleve/{idGroupe}', [CoursController::class, 'eleveListe']);
 Route::get('/cours/absence/{idEleve}/{idGroupe}', [CoursController::class, 'eleveAbsent']);
 Route::get('/cours/AJ/{idEleve}/{idGroupe}', [CoursController::class, 'eleveAJ']);
 Route::get('/cours/present/{idEleve}/{idGroupe}', [CoursController::class, 'elevePresent']);
+Route::get('/groupe/eleves/{idGroupe}', [GroupeController::class, 'listeEleve']);
 
 
 
